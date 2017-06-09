@@ -1,0 +1,40 @@
+Despues de instalar git en la maquina vamos a configurarlo con los siguientes codigos:
+
+
+git config --global user.name "Juan Diego"
+git config --global user.email "juandiego960304"
+
+para mirarlo es:
+
+git config --global user.name
+
+
+Para cambiar los colores de los mensajes 
+
+giitt config --global color.ui true
+
+Para ver toda nuestra configuracion
+git config --global --list
+
+
+
+
+
+git status (verificar que este en master)
+git checkout master (me paso a master )
+git checkout -b PrimeraPrueba
+
+Se puede añadir por carpeta o por todos.
+git add .git
+git add -A
+
+
+git commit -m "comentario"
+git push origin PrimeraPrueba
+ codigo que me muestra el cmd para el push (git push --set-upstream origin SegundaPr
+git checkout master
+git merge PrimeraPrueba
+git push origin master
+git tag -a v2.0 -m"Primera prueba tecnica"
+git push origin v2.0
+
