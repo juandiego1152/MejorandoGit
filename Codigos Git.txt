@@ -68,3 +68,11 @@ git help status
 
 Para mostrar todas las ramas 
 git branch
+
+Codigo para cambiar el nombre de la rama
+git branch --move "Nuevo nombre"
+
+Codigo para eliminar la rama actual
+git branch -d
+eliminar rama especifica
+git branch -d "nombre rama"
