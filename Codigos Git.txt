@@ -18,8 +18,6 @@ git config --global --list
 
 
 
-
-
 git status (verificar que este en master)
 git checkout master (me paso a master )
 git checkout -b PrimeraPrueba
@@ -27,6 +25,15 @@ git checkout -b PrimeraPrueba
 Se puede añadir por carpeta o por todos.
 git add .git
 git add -A
+
+
+Para mirar los commits que hemos hecho podemos hacer
+git log
+
+y luego si necesitamos ir al codigo de alugn commit solo es necesario hacer
+
+git checkout "codigo que da el log del commit"
+
 
 
 git commit -m "comentario"
@@ -38,3 +45,26 @@ git push origin master
 git tag -a v2.0 -m"Primera prueba tecnica"
 git push origin v2.0
 
+
+NO mueve el codigo, solo borra el commit que le asignemos
+git reset --soft "codigo commit"
+
+Borra el stagin are pero no el working area
+git reset --mixed "codigo commit"
+
+Este reset borra todos los commits del git hub y el codigo base del cambio en el cual se hizo el commit
+git reset --hard "codigo commit"
+
+
+Este codigo sirve para generar todos los commits en un archivo de txt
+git log > commits.txt
+
+Documentacion y ayuda sobre git
+git help
+
+Tambien podemos ver algo en especifico
+git help status
+
+
+Para mostrar todas las ramas 
+git branch
