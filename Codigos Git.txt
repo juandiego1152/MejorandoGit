@@ -17,6 +17,18 @@ Para ver toda nuestra configuracion
 git config --global --list
 
 
+Usamos este codigo para asignar la carpeta al repositorio en github
+git remote add origin hhtps://...."pagina"
+
+Sirve para visualizar si esa carpeta si esta en el repositorio que le anexamos.
+git remote -v 
+
+Este sirve para mover a otro repositorio
+git remote remove origin ...
+
+Para arreglar un commit que ya habiamos hecho
+git commit --amend -m "Nuevo mensaje"
+
 
 git status (verificar que este en master)
 git checkout master (me paso a master )
@@ -42,8 +54,17 @@ git push origin PrimeraPrueba
 git checkout master
 git merge PrimeraPrueba
 git push origin master
-git tag -a v2.0 -m"Primera prueba tecnica"
+git tag -a v2.0 -m "Primera prueba tecnica"
+
 git push origin v2.0
+
+
+Para hacer un tag a un commit en especifico
+git tag -a v2.0 -m "Primera prueba tecnica" sha asdfkjsf3123 <- codigo del commit
+
+
+Este sirve para subir todos los tags directamente y no uno por uno.
+git push origin --tags
 
 
 NO mueve el codigo, solo borra el commit que le asignemos
@@ -69,10 +90,27 @@ git help status
 Para mostrar todas las ramas 
 git branch
 
+git branch -a para mostrar incluso las de github
+
 Codigo para cambiar el nombre de la rama
 git branch --move "Nuevo nombre"
 
+y usamos git push origin "nombre" -f 
+esta se usa para forzar el cambio, por que como es el mismo commit git no lo va a reconocer pero de igual forma lo tenemos que hacer.
+
 Codigo para eliminar la rama actual
-git branch -d
+git branch -D
 eliminar rama especifica
-git branch -d "nombre rama"
+git branch -D "nombre rama"
+
+
+Para traer los cambios de una rama hechos por otra persona usamos.
+
+git fetch origin XXXX
+
+git merge origin/master
+
+Con esto ya tenemos los cambios de esa rama en nuestra master local.
+
+
+
